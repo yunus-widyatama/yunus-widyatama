@@ -1,0 +1,24 @@
+class Person:
+    def __init__(self, name, age, occupation, hobbies):
+        self.name = name
+        self.age = age
+        self.occupation = occupation
+        self.hobbies = hobbies
+
+    def display_info(self):
+        print(f"Nama: {self.name}")
+        print(f"Usia: {self.age} tahun")
+        print(f"Pekerjaan: {self.occupation}")
+        print(f"Hobi: {', '.join(self.hobbies)}")
+        print("-" * 30)
+
+# Contoh penggunaan
+if __name__ == "__main__":
+    people = [
+        Person("Andi", 25, "Programmer", ["Membaca", "Bersepeda", "Bermain Musik"]),
+        Person("Siti", 30, "Desainer", ["Melukis", "Memasak", "Fotografi"]),
+        Person("Budi", 28, "Pengusaha", ["Olahraga", "Bermain Catur", "Traveling"]),
+    ]
+
+    for person in people:
+        person.display_info()
